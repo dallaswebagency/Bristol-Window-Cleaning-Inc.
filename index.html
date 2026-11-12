@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bristol Window Cleaning Inc. | Residential &amp; Commercial Window Cleaning Calgary</title>
+<meta name="description" content="Bristol Window Cleaning Inc. offers residential and commercial window cleaning, pressure washing, gutter cleaning and post-construction window cleaning in Calgary. Free, no-obligation quotes.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d1e2f;
+  --ink-2:#132a40;
+  --sky:#418bbd;
+  --sky-deep:#2c6e9c;
+  --lime:#8add3a;
+  --lime-deep:#6fbf22;
+  --mist:#eef4f8;
+  --paper:#f8fafb;
+  --line:#d6e2ea;
+  --text:#28394a;
+  --muted:#5d7083;
+  --display:'Barlow Condensed',sans-serif;
+  --body:'Karla',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{overflow-x:hidden}
+body{font-family:var(--body);color:var(--text);background:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,92%);margin:0 auto}
+.eyebrow{font-family:var(--display);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.85rem;color:var(--sky)}
+h1,h2,h3{font-family:var(--display);color:var(--ink);line-height:1;text-transform:uppercase;letter-spacing:.005em}
+h2{font-size:clamp(2.4rem,4.6vw,3.9rem);font-weight:800}
+.btn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:1.02rem;padding:.95rem 1.6rem;border-radius:3px;transition:.25s;cursor:pointer;border:0}
+.btn-lime{background:var(--lime);color:var(--ink)}
+.btn-lime:hover{background:#9fea55;transform:translateY(-2px)}
+.btn-line{border:2px solid rgba(255,255,255,.35);color:#fff}
+.btn-line:hover{border-color:var(--lime);color:var(--lime)}
+svg.i{width:18px;height:18px;flex:none}
+
+/* ---------- utility bar ---------- */
+.util{background:#081523;color:#a9bccc;font-size:.88rem}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;padding:.55rem 0;gap:1rem;flex-wrap:wrap}
+.util span,.util a{display:inline-flex;align-items:center;gap:.45rem}
+.util a:hover{color:var(--lime)}
+.util .l{display:flex;gap:1.6rem;flex-wrap:wrap}
+.util .r{display:flex;gap:1rem}
+.util svg{width:15px;height:15px;color:var(--lime)}
+
+/* ---------- header ---------- */
+header{background:var(--ink);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.06)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:2rem;height:92px}
+.logo img{height:74px;width:auto}
+nav ul{display:flex;list-style:none;gap:.3rem;align-items:center}
+nav li{position:relative}
+nav>ul>li>a{display:block;white-space:nowrap;padding:.6rem .85rem;color:#dbe6ef;font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.07em;font-size:1.02rem}
+nav>ul>li>a:hover{color:var(--lime)}
+nav .drop{position:absolute;top:100%;left:0;background:#fff;min-width:270px;padding:.6rem 0;border-top:3px solid var(--lime);box-shadow:0 18px 40px rgba(8,21,35,.25);opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s}
+nav li:hover .drop{opacity:1;visibility:visible;transform:none}
+nav .drop a{display:block;padding:.55rem 1.2rem;font-size:.95rem;color:var(--text)}
+nav .drop a:hover{background:var(--mist);color:var(--sky-deep)}
+.hdr-call{display:flex;align-items:center;gap:.8rem;color:#fff}
+.hdr-call small{display:block;white-space:nowrap;color:#8ea6ba;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase}
+.hdr-call strong{font-family:var(--display);font-size:1.45rem;letter-spacing:.03em}
+.hdr-call .dot{width:46px;height:46px;border-radius:50%;background:var(--lime);display:grid;place-items:center;color:var(--ink)}
+.burger{display:none;background:none;border:0;color:#fff;cursor:pointer}
+
+/* ---------- hero: squeegee wipe ---------- */
+.hero{position:relative;background:var(--ink);color:#fff;overflow:hidden;min-height:720px}
+.hero-photo{position:absolute;inset:0;background:url(images/highrise-crew-bright.jpg) 62% 30%/cover no-repeat}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,30,47,.97) 0%,rgba(13,30,47,.9) 36%,rgba(13,30,47,.35) 62%,rgba(13,30,47,.1) 100%)}
+/* the diagonal blade from the logo */
+.blade{position:absolute;top:-10%;bottom:-10%;left:58%;width:150px;background:linear-gradient(180deg,rgba(65,139,189,.0),rgba(65,139,189,.55) 30%,rgba(65,139,189,.7));transform:skewX(-24deg);mix-blend-mode:screen;z-index:1}
+.blade::before{content:"";position:absolute;left:-10px;top:0;bottom:0;width:10px;background:var(--lime)}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;min-height:720px;padding:5rem 0 7.5rem}
+.hero h1{color:#fff;font-size:clamp(3.2rem,6.2vw,5.6rem);font-weight:800;line-height:.9;margin:1.1rem 0 1.5rem}
+.hero h1 em{font-style:normal;color:var(--lime);display:block}
+.hero p.lead{font-size:1.18rem;color:#c3d3e0;max-width:520px;margin-bottom:2.2rem}
+.hero .ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.hero .eyebrow{color:var(--lime);display:flex;align-items:center;gap:.8rem}
+.hero .eyebrow::before{content:"";width:38px;height:2px;background:var(--lime)}
+/* offer ticket */
+.ticket{position:absolute;right:4%;bottom:7.2rem;z-index:3;background:var(--lime);color:var(--ink);display:flex;align-items:stretch;border-radius:4px;box-shadow:0 24px 50px rgba(0,0,0,.35);transform:rotate(-3deg)}
+.ticket .amt{font-family:var(--display);font-weight:800;font-size:4.6rem;line-height:1;padding:1rem 1.3rem;display:flex;align-items:center;border-right:2px dashed rgba(13,30,47,.4)}
+.ticket .amt sup{font-size:2rem;margin-right:.1rem}
+.ticket .txt{padding:1rem 1.4rem;display:flex;flex-direction:column;justify-content:center}
+.ticket .txt b{font-family:var(--display);font-size:1.6rem;text-transform:uppercase;line-height:1}
+.ticket .txt span{font-size:.9rem;max-width:210px;line-height:1.35;margin-top:.35rem}
+/* bottom service rail */
+.rail{position:absolute;left:0;right:0;bottom:0;z-index:3;background:rgba(8,21,35,.82);backdrop-filter:blur(6px);border-top:1px solid rgba(255,255,255,.08)}
+.rail .wrap{display:grid;grid-template-columns:repeat(4,1fr);min-height:auto;padding:0}
+.rail a{padding:1.3rem 1.2rem;display:flex;align-items:center;gap:.8rem;color:#dbe6ef;font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:1.05rem;border-left:1px solid rgba(255,255,255,.08);transition:.2s}
+.rail a:last-child{border-right:1px solid rgba(255,255,255,.08)}
+.rail a:hover{background:var(--sky-deep);color:#fff}
+.rail a i{font-style:normal;color:var(--lime);font-size:.85rem}
+
+/* ---------- intro: streak free statement ---------- */
+.statement{padding:7rem 0 5rem;background:#fff}
+.statement .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:5rem;align-items:start}
+.statement h2 span{color:var(--sky)}
+.statement .copy p{font-size:1.15rem;color:var(--muted);margin-bottom:1.2rem}
+.statement .copy p:first-child{font-size:1.45rem;color:var(--ink);line-height:1.45;font-weight:500}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink);margin-top:2.4rem}
+.facts div{padding:1.3rem 1rem 0 0}
+.facts b{display:block;font-family:var(--display);font-size:2.1rem;color:var(--ink);text-transform:uppercase;line-height:1}
+.facts small{color:var(--muted);font-size:.92rem}
+
+/* ---------- services: tabbed ---------- */
+.svc{background:var(--mist);padding:6.5rem 0;position:relative;overflow:hidden}
+.svc::before{content:"";position:absolute;right:-60px;top:0;width:520px;height:280px;background:url(images/residential-icon.jpg) right top/contain no-repeat;opacity:.09}
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:2.6rem;position:relative}
+.tabs{display:flex;gap:0;border:2px solid var(--ink);border-radius:3px;overflow:hidden;background:#fff}
+.tabs button{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.07em;font-size:1.05rem;padding:.85rem 1.4rem;border:0;background:transparent;color:var(--ink);cursor:pointer;transition:.2s}
+.tabs button+button{border-left:2px solid var(--ink)}
+.tabs button.on{background:var(--ink);color:var(--lime)}
+.panel{display:none;grid-template-columns:1.15fr .85fr;background:#fff;box-shadow:0 30px 60px rgba(13,30,47,.08);position:relative}
+.panel.on{display:grid;animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.panel .media{position:relative;min-height:520px;overflow:hidden}
+.panel .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.panel .media.split{display:grid;grid-template-rows:1fr 1fr;gap:6px;background:#fff}
+.panel .media.split figure{position:relative;overflow:hidden}
+.panel .media.split figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.panel .media figcaption{position:absolute;left:0;bottom:0;background:var(--ink);color:#fff;font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-weight:600;padding:.45rem .9rem;font-size:.9rem}
+.panel .body{padding:3.2rem 3rem}
+.panel h3{font-size:2.5rem;font-weight:800;margin-bottom:1rem}
+.panel .body>p{color:var(--muted);margin-bottom:1.6rem}
+.svc-list{list-style:none;display:grid;gap:0;margin-bottom:2rem}
+.svc-list li{padding:1rem 0;border-top:1px solid var(--line);display:grid;grid-template-columns:34px 1fr;gap:.6rem}
+.svc-list li:last-child{border-bottom:1px solid var(--line)}
+.svc-list .n{font-family:var(--display);font-weight:800;color:var(--sky);font-size:1.15rem}
+.svc-list b{display:block;color:var(--ink);font-size:1.05rem}
+.svc-list span{color:var(--muted);font-size:.95rem}
+.link-arrow{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--sky-deep);display:inline-flex;gap:.5rem;align-items:center;border-bottom:2px solid var(--lime);padding-bottom:.2rem}
+.link-arrow:hover{color:var(--ink)}
+
+/* ---------- gutter twice-a-year band ---------- */
+.season{display:grid;grid-template-columns:1fr 1fr;min-height:460px;background:var(--ink)}
+.season .photo{background:url(images/gutter-cleaning.jpg) 30% center/cover}
+.season .txt{padding:5rem 5vw;color:#c3d3e0;display:flex;flex-direction:column;justify-content:center;position:relative}
+.season h2{color:#fff;margin:.8rem 0 1.2rem}
+.season .cal{display:flex;gap:.6rem;margin:1.6rem 0 2rem}
+.season .cal span{font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-weight:700;padding:.55rem .95rem;border:1px solid rgba(255,255,255,.18);color:#9fb4c6;border-radius:2px}
+.season .cal span.hit{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+.season .eyebrow{color:var(--lime)}
+
+/* ---------- safety / commercial credentials ---------- */
+.safety{position:relative;padding:7rem 0;background:#122a42 url(images/calgary-skyline.webp) center bottom/cover;color:#d4e2ec;overflow:hidden}
+.safety::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,30,47,.92),rgba(13,30,47,.55))}
+.safety .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.safety h2{color:#fff;margin:.9rem 0 1.3rem}
+.safety .eyebrow{color:var(--lime)}
+.safety p{color:#bcd0de;font-size:1.08rem}
+.pledges{display:grid;gap:1rem}
+.pledge{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-left:4px solid var(--lime);padding:1.4rem 1.6rem;backdrop-filter:blur(4px)}
+.pledge b{font-family:var(--display);text-transform:uppercase;color:#fff;font-size:1.35rem;letter-spacing:.03em;display:block}
+.pledge span{color:#a9bfd0;font-size:.97rem}
+.badges{display:flex;gap:1rem;margin-top:2rem;align-items:center}
+.badges a{background:#fff;padding:.5rem .8rem;border-radius:3px;transition:.2s}
+.badges a:hover{transform:translateY(-3px)}
+.badges img{height:52px;width:auto}
+
+/* ---------- quote ---------- */
+.quote{padding:7rem 0;background:#fff}
+.quote .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:4.5rem;align-items:start}
+.big48{font-family:var(--display);font-weight:800;font-size:clamp(7rem,15vw,12rem);line-height:.8;color:var(--sky);letter-spacing:-.02em;margin:1.4rem 0 .4rem}
+.big48 small{font-size:.32em;color:var(--ink);letter-spacing:.04em;margin-left:.3rem}
+.quote .intro p{color:var(--muted);font-size:1.08rem;margin-bottom:1rem}
+.quote .intro .free{display:flex;gap:1.4rem;margin:1.6rem 0 2rem;flex-wrap:wrap}
+.quote .intro .free span{display:flex;gap:.5rem;align-items:center;font-weight:600;color:var(--ink)}
+.quote .intro .free svg{color:var(--lime-deep)}
+.direct{border-top:1px solid var(--line);padding-top:1.5rem;display:grid;gap:.8rem}
+.direct a{display:flex;align-items:center;gap:.8rem;font-weight:600;color:var(--ink)}
+.direct a:hover{color:var(--sky-deep)}
+.direct .ic{width:40px;height:40px;border-radius:50%;background:var(--mist);display:grid;place-items:center;color:var(--sky-deep)}
+form.qf{background:var(--ink);padding:2.6rem;border-radius:4px;position:relative;color:#c3d3e0}
+form.qf::before{content:"";position:absolute;top:0;left:0;width:120px;height:5px;background:var(--lime)}
+form.qf h3{color:#fff;font-size:2rem;margin-bottom:.4rem}
+form.qf>p{font-size:.95rem;margin-bottom:1.6rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.f{display:flex;flex-direction:column;gap:.35rem}
+.f label{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:#8ea6ba;font-weight:700}
+.f input,.f select,.f textarea{font-family:var(--body);font-size:1rem;padding:.85rem .95rem;background:#0a1828;border:1px solid #284360;color:#fff;border-radius:3px;outline:none;transition:.2s}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--lime)}
+.f textarea{min-height:110px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+.chips label{cursor:pointer}
+.chips input{display:none}
+.chips span{display:inline-block;padding:.5rem .9rem;border:1px solid #284360;border-radius:40px;font-size:.92rem;color:#c3d3e0;transition:.2s}
+.chips input:checked+span{background:var(--lime);border-color:var(--lime);color:var(--ink);font-weight:700}
+form.qf .btn{width:100%;justify-content:center;margin-top:.6rem}
+
+/* ---------- blog ---------- */
+.news{padding:6rem 0 7rem;background:var(--mist)}
+.news-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:2.6rem;gap:2rem}
+.posts{display:grid;grid-template-columns:1.3fr 1fr;gap:2rem}
+.post{background:#fff;display:grid;grid-template-columns:1fr;overflow:hidden;transition:.25s}
+.post:hover{transform:translateY(-4px);box-shadow:0 24px 50px rgba(13,30,47,.1)}
+.post .im{aspect-ratio:16/9;overflow:hidden;position:relative}
+.post .im img{width:100%;height:100%;object-fit:cover}
+.post .im .tag{position:absolute;top:1rem;left:1rem;background:var(--lime);color:var(--ink);font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;padding:.3rem .7rem}
+.post .b{padding:1.8rem 2rem 2.2rem}
+.post h3{font-size:1.9rem;margin-bottom:.7rem}
+.post p{color:var(--muted);margin-bottom:1.1rem}
+.post.side .im{aspect-ratio:4/3}
+
+/* ---------- jobs strip ---------- */
+.jobs{background:var(--lime);padding:2.4rem 0}
+.jobs .wrap{display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap}
+.jobs h3{font-size:2.3rem;font-weight:800}
+.jobs p{color:#21401a;font-weight:500}
+.jobs .btn{background:var(--ink);color:#fff}
+.jobs .btn:hover{background:#000}
+
+/* ---------- footer ---------- */
+footer{background:#081523;color:#94a9bb;padding:5rem 0 0;font-size:.97rem}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:3rem;padding-bottom:3.5rem}
+.f-grid h4{font-family:var(--display);text-transform:uppercase;letter-spacing:.12em;color:#fff;font-size:1.15rem;margin-bottom:1.2rem}
+.f-grid ul{list-style:none;display:grid;gap:.55rem}
+.f-grid a:hover{color:var(--lime)}
+.f-brand img{height:96px;width:auto;margin-bottom:1.2rem}
+.f-brand p{max-width:300px;margin-bottom:1.4rem}
+.soc{display:flex;gap:.6rem}
+.soc a{width:40px;height:40px;border:1px solid #2a4157;border-radius:50%;display:grid;place-items:center;transition:.2s}
+.soc a:hover{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.f-contact li{display:flex;gap:.7rem;align-items:flex-start}
+.f-contact svg{color:var(--lime);margin-top:.25rem}
+.f-badges{display:flex;gap:.7rem;margin-top:1.2rem}
+.f-badges a{background:#fff;padding:.35rem .5rem;border-radius:3px}
+.f-badges img{height:40px;width:auto}
+.f-bot{border-top:1px solid #1c3046;padding:1.4rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.9rem}
+.f-bot a{color:var(--lime)}
+.f-bot a:hover{text-decoration:underline}
+
+/* ---------- responsive ---------- */
+@media(max-width:1100px){
+  nav,.hdr-call{display:none}
+  .burger{display:block}
+  nav.open{display:block;position:absolute;top:92px;left:0;right:0;background:var(--ink);padding:1rem 4%}
+  nav.open ul{flex-direction:column;align-items:stretch}
+  nav.open .drop{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;background:transparent;padding:0 0 0 1rem}
+  nav.open .drop a{color:#9fb4c6}
+  .ticket{position:relative;right:auto;bottom:auto;margin:0 4% 2.5rem;display:inline-flex;max-width:92%}
+  .rail{position:relative}
+  .hero-photo::after{background:linear-gradient(180deg,rgba(13,30,47,.92),rgba(13,30,47,.75))}
+  .hero .wrap{grid-template-columns:1fr;padding-bottom:2rem;min-height:auto}
+  .statement .wrap,.safety .wrap,.quote .wrap{grid-template-columns:1fr;gap:3rem}
+  .panel.on{grid-template-columns:1fr}
+  .panel .media{min-height:340px}
+  .season{grid-template-columns:1fr}.season .photo{min-height:300px}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .posts{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .util .r,.util .hide-sm{display:none}
+  .logo img{height:60px}
+  .rail .wrap{grid-template-columns:1fr 1fr}
+  .rail a{font-size:.92rem;padding:1rem .8rem}
+  .svc-head,.news-head{flex-direction:column;align-items:flex-start}
+  .tabs{width:100%;flex-direction:column}
+  .tabs button+button{border-left:0;border-top:2px solid var(--ink)}
+  .panel .body{padding:2rem 1.5rem}
+  .row{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr 1fr}
+  .f-grid{grid-template-columns:1fr}
+  .ticket .amt{font-size:3rem;padding:.8rem}
+  .ticket .txt b{font-size:1.25rem}
+  .hero .eyebrow::before{display:none}
+  .blade{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="util">
+  <div class="wrap">
+    <div class="l">
+      <span><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Monday to Friday, 9:00 AM to 5:00 PM</span>
+      <a class="hide-sm" href="mailto:service@bristolwindowcleaning.ca"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></svg>service@bristolwindowcleaning.ca</a>
+    </div>
+    <div class="r">
+      <a href="https://www.facebook.com/" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6Z"/></svg>Facebook</a>
+      <a href="https://www.linkedin.com/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm-2 6h4v12H2V9Zm7 0h3.8v1.7c.6-1 1.9-2 3.9-2 4 0 4.3 2.6 4.3 6V21h-4v-5.6c0-1.4 0-3.1-1.9-3.1s-2.2 1.5-2.2 3V21H9V9Z"/></svg>LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="logo"><img src="images/logo.png" alt="Bristol Window Cleaning - Window cleaning of distinction"></a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#quote">Free Quote</a></li>
+        <li><a href="#services">Residential</a>
+          <div class="drop"><a href="#services">Window Cleaning</a><a href="#services">Pressure Washing</a><a href="#gutters">Gutter Cleaning</a></div></li>
+        <li><a href="#services">Commercial</a>
+          <div class="drop"><a href="#services">Low / Mid Rise Window Cleaning</a><a href="#services">Post Construction Cleaning</a><a href="#services">Pressure Washing</a></div></li>
+        <li><a href="#jobs">Jobs</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#quote">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="tel:4032447279" class="hdr-call">
+      <span class="dot"><svg class="i" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg></span>
+      <span><small>Call for a free quote</small><strong>(403) 244-7279</strong></span>
+    </a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-photo" role="img" aria-label="Bristol crew cleaning tall windows on a large home"></div>
+  <div class="blade" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Calgary residential &amp; commercial</div>
+      <h1>Window cleaning <em>of distinction</em></h1>
+      <p class="lead">A streak-free finish on every pane, for properties of any size, any height and any location. Plus pressure washing and gutter cleaning, done by the same careful crew.</p>
+      <div class="ctas">
+        <a href="#quote" class="btn btn-lime">Get my free quote
+          <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="tel:4032447279" class="btn btn-line">(403) 244-7279</a>
+      </div>
+    </div>
+  </div>
+  <a href="#quote" class="ticket">
+    <div class="amt"><sup>$</sup>20</div>
+    <div class="txt"><b>Off any new service</b><span>For new customers, or existing customers adding a new service.</span></div>
+  </a>
+  <div class="rail">
+    <div class="wrap">
+      <a href="#services"><i>01</i>Window Cleaning</a>
+      <a href="#services"><i>02</i>Pressure Washing</a>
+      <a href="#gutters"><i>03</i>Gutter Cleaning</a>
+      <a href="#services"><i>04</i>Post Construction</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section class="statement" id="about">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Bristol Window Cleaning Inc.</div>
+      <h2 style="margin-top:1rem">Any size.<br>Any height.<br><span>Any location.</span></h2>
+    </div>
+    <div class="copy">
+      <p>Large houses, acreages, walkouts, high inside windows and the panes nobody else wants to reach. If it's glass, we'll get it streak-free.</p>
+      <p>We look after homes and businesses across Calgary with residential and commercial window cleaning, pressure washing, gutter cleaning and post-construction window cleaning for new builds and show homes.</p>
+      <div class="facts">
+        <div><b>Free</b><small>No-obligation quotes</small></div>
+        <div><b>48 hrs</b><small>Exact quote after on-site inspection</small></div>
+        <div><b>ACSA</b><small>&amp; WCB Alberta</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="svc" id="services">
+  <div class="wrap">
+    <div class="svc-head">
+      <div>
+        <div class="eyebrow">What we clean</div>
+        <h2 style="margin-top:.8rem">Pick your property</h2>
+      </div>
+      <div class="tabs" role="tablist">
+        <button class="on" data-t="res">Residential</button>
+        <button data-t="com">Commercial</button>
+        <button data-t="post">Post Construction</button>
+      </div>
+    </div>
+
+    <div class="panel on" id="res">
+      <div class="media split">
+        <figure><img src="images/highrise-crew-bright.jpg" alt="Window cleaning on a large home" style="object-position:50% 20%"><figcaption>Window cleaning</figcaption></figure>
+        <figure><img src="images/pressure-washing.jpg" alt="Pressure washing a concrete driveway"><figcaption>Pressure washing</figcaption></figure>
+      </div>
+      <div class="body">
+        <h3>For your home</h3>
+        <p>From a bungalow to an acreage, we treat every window like it's the one people see first.</p>
+        <ul class="svc-list">
+          <li><span class="n">01</span><div><b>Window Cleaning</b><span>Large houses, acreages, walkouts, high inside windows and hard-to-access windows.</span></div></li>
+          <li><span class="n">02</span><div><b>Pressure Washing</b><span>Concrete and exterior surfaces around your home, cleaned up.</span></div></li>
+          <li><span class="n">03</span><div><b>Gutter Cleaning</b><span>Recommended twice a year to keep water flowing where it should.</span></div></li>
+        </ul>
+        <a href="#quote" class="link-arrow">Quote my home <span>&rarr;</span></a>
+      </div>
+    </div>
+
+    <div class="panel" id="com">
+      <div class="media"><img src="images/flow-commercial-midrise.jpg" alt="Commercial mid-rise window cleaning in Calgary" onerror="this.src='images/calgary-skyline.webp'"></div>
+      <div class="body">
+        <h3>For your building</h3>
+        <p>Safety comes first on every commercial job. Our crew works under a training program with clear jobsite procedures.</p>
+        <ul class="svc-list">
+          <li><span class="n">01</span><div><b>Low / Mid Rise Window Cleaning</b><span>Commercial glass cleaned safely, with trained crews and set jobsite procedures.</span></div></li>
+          <li><span class="n">02</span><div><b>Commercial Pressure Washing</b><span>Pressure washing for commercial properties.</span></div></li>
+          <li><span class="n">03</span><div><b>Post Construction Cleaning</b><span>New builds and show homes made ready for handover.</span></div></li>
+        </ul>
+        <a href="#quote" class="link-arrow">Quote my building <span>&rarr;</span></a>
+      </div>
+    </div>
+
+    <div class="panel" id="post">
+      <div class="media"><img src="images/flow-show-home.jpg" alt="New build show home with clean windows" onerror="this.src='images/highrise-crew-bright.jpg'"></div>
+      <div class="body">
+        <h3>For your new build</h3>
+        <p>Construction leaves its mark on glass. We clear it away so new builds and show homes are ready for handover.</p>
+        <ul class="svc-list">
+          <li><span class="n">01</span><div><b>New Builds</b><span>Post-construction window cleaning before the keys change hands.</span></div></li>
+          <li><span class="n">02</span><div><b>Show Homes</b><span>Spotless glass that lets the home sell itself.</span></div></li>
+          <li><span class="n">03</span><div><b>Ready for Handover</b><span>One visit, and the property is ready to show.</span></div></li>
+        </ul>
+        <a href="#quote" class="link-arrow">Quote my project <span>&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUTTERS -->
+<section class="season" id="gutters">
+  <div class="photo" role="img" aria-label="Gloved hand clearing debris from a gutter"></div>
+  <div class="txt">
+    <div class="eyebrow">Gutter cleaning</div>
+    <h2>Twice a year keeps the trouble away</h2>
+    <p>Leaves, seeds and roof grit build up fast. We recommend cleaning your gutters twice a year, so water drains the way it should before winter sets in.</p>
+    <div class="cal"><span>Jan</span><span>Mar</span><span class="hit">Spring</span><span>Jul</span><span class="hit">Fall</span><span>Dec</span></div>
+    <div><a href="#quote" class="btn btn-lime">Book gutter cleaning</a></div>
+  </div>
+</section>
+
+<!-- SAFETY -->
+<section class="safety">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Low &amp; mid rise commercial</div>
+      <h2>Safety is part of the shine</h2>
+      <p>Commercial window cleaning means working at height. Every crew member goes through our training program and follows set jobsite procedures, so your building gets cleaned and everyone gets home safe.</p>
+      <div class="badges">
+        <a href="https://youracsa.ca" target="_blank" rel="noopener"><img src="images/acsa.jpg" alt="ACSA"></a>
+        <a href="https://www.wcb.ab.ca" target="_blank" rel="noopener"><img src="images/wcb.jpg" alt="WCB Alberta"></a>
+      </div>
+    </div>
+    <div class="pledges">
+      <div class="pledge"><b>Training program</b><span>Crew trained before they go up.</span></div>
+      <div class="pledge"><b>Jobsite procedures</b><span>Set safety steps on every commercial site.</span></div>
+      <div class="pledge"><b>Any size, any height</b><span>Low-rise and mid-rise buildings, any size, height or location.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div class="intro">
+      <div class="eyebrow">Free quote</div>
+      <div class="big48">48<small>hours</small></div>
+      <h2 style="font-size:clamp(2rem,3.4vw,2.8rem)">An exact quote, not a guess</h2>
+      <p style="margin-top:1rem">We come out, inspect your property on site and send you an exact quote within 48 hours. Free, with no obligation.</p>
+      <div class="free">
+        <span><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-10"/></svg>Free</span>
+        <span><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-10"/></svg>No obligation</span>
+        <span><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-10"/></svg>On-site inspection</span>
+      </div>
+      <div class="direct">
+        <a href="tel:4032447279"><span class="ic"><svg class="i" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg></span>(403) 244-7279</a>
+        <a href="mailto:service@bristolwindowcleaning.ca"><span class="ic"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></svg></span>service@bristolwindowcleaning.ca</a>
+      </div>
+    </div>
+    <form class="qf" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thanks, we\'ll be in touch';">
+      <h3>Request your free quote</h3>
+      <p>Tell us a little about the property and we'll set up the on-site inspection.</p>
+      <div class="f" style="margin-bottom:.5rem"><label>What do you need?</label></div>
+      <div class="chips">
+        <label><input type="checkbox" checked><span>Window Cleaning</span></label>
+        <label><input type="checkbox"><span>Pressure Washing</span></label>
+        <label><input type="checkbox"><span>Gutter Cleaning</span></label>
+        <label><input type="checkbox"><span>Post Construction</span></label>
+      </div>
+      <div class="row">
+        <div class="f"><label for="n">Name</label><input id="n" required></div>
+        <div class="f"><label for="p">Phone</label><input id="p" type="tel" required></div>
+      </div>
+      <div class="row">
+        <div class="f"><label for="e">Email</label><input id="e" type="email"></div>
+        <div class="f"><label for="t">Property type</label><select id="t"><option>Residential</option><option>Commercial</option><option>New build / Show home</option></select></div>
+      </div>
+      <div class="f" style="margin-bottom:1rem"><label for="a">Property address</label><input id="a"></div>
+      <div class="f"><label for="m">Anything we should know?</label><textarea id="m" placeholder="Number of windows, high inside windows, acreage access..."></textarea></div>
+      <button class="btn btn-lime" type="submit">Send my quote request</button>
+    </form>
+  </div>
+</section>
+
+<!-- JOBS -->
+<section class="jobs" id="jobs">
+  <div class="wrap">
+    <div><h3>Join the Bristol crew</h3><p>See current openings at Bristol Window Cleaning.</p></div>
+    <a href="#jobs" class="btn">See jobs</a>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="news" id="blog">
+  <div class="wrap">
+    <div class="news-head">
+      <div><div class="eyebrow">From the blog</div><h2 style="margin-top:.8rem">Latest from Bristol</h2></div>
+      <a href="#blog" class="link-arrow">All posts <span>&rarr;</span></a>
+    </div>
+    <div class="posts">
+      <a class="post" href="#blog">
+        <div class="im"><img src="images/gutter-cleaning.jpg" alt="Gutter full of fall leaves"><span class="tag">Seasonal</span></div>
+        <div class="b"><h3>Face It&hellip; Winter is on Its Way!</h3><p>Why your gutters and roof need attention before the snow comes.</p><span class="link-arrow">Read post &rarr;</span></div>
+      </a>
+      <a class="post side" href="#blog">
+        <div class="im"><img src="images/truck-bright.jpg" alt="Bristol Window Cleaning truck with new wrap" style="object-position:40% 60%"><span class="tag">News</span></div>
+        <div class="b"><h3>New Truck Wrap Design!</h3><p>Fresh Bristol branding on the company trucks.</p><span class="link-arrow">Read post &rarr;</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <img src="images/logo.png" alt="Bristol Window Cleaning">
+        <p>Residential and commercial window cleaning, pressure washing and gutter cleaning in Calgary.</p>
+        <div class="soc">
+          <a href="https://www.facebook.com/" aria-label="Facebook"><svg class="i" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6Z"/></svg></a>
+          <a href="https://www.linkedin.com/" aria-label="LinkedIn"><svg class="i" viewBox="0 0 24 24" fill="currentColor"><path d="M4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm-2 6h4v12H2V9Zm7 0h3.8v1.7c.6-1 1.9-2 3.9-2 4 0 4.3 2.6 4.3 6V21h-4v-5.6c0-1.4 0-3.1-1.9-3.1s-2.2 1.5-2.2 3V21H9V9Z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Residential</h4>
+        <ul><li><a href="#services">Window Cleaning</a></li><li><a href="#services">Pressure Washing</a></li><li><a href="#gutters">Gutter Cleaning</a></li></ul>
+        <h4 style="margin-top:1.8rem">Company</h4>
+        <ul><li><a href="#about">About</a></li><li><a href="#jobs">Jobs</a></li><li><a href="#blog">Blog</a></li></ul>
+      </div>
+      <div>
+        <h4>Commercial</h4>
+        <ul><li><a href="#services">Low / Mid Rise Window Cleaning</a></li><li><a href="#services">Post Construction Cleaning</a></li><li><a href="#services">Pressure Washing</a></li><li><a href="#quote">Free Quote</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="f-contact">
+          <li><svg class="i" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg><a href="tel:4032447279">(403) 244-7279</a></li>
+          <li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:service@bristolwindowcleaning.ca">service@bristolwindowcleaning.ca</a></li>
+          <li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Monday to Friday<br>9:00 AM to 5:00 PM</span></li>
+        </ul>
+        <div class="f-badges">
+          <a href="https://youracsa.ca" target="_blank" rel="noopener"><img src="images/acsa.jpg" alt="ACSA"></a>
+          <a href="https://www.wcb.ab.ca" target="_blank" rel="noopener"><img src="images/wcb.jpg" alt="WCB Alberta"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap f-bot">
+    <span>&copy; 2026 Bristol Window Cleaning Inc. All rights reserved.</span>
+    <span>Design by <a href="https://cleaningdigital.ca/" target="_blank" rel="noopener">Cleaning Digital</a>.</span>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.panel').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');document.getElementById(b.dataset.t).classList.add('on');
+}));
+</script>
+</body>
+</html>
